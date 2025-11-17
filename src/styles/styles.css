@@ -703,5 +703,103 @@ section.container.active {
         font-size: 2.1rem;
     }
 }
+/* ===========================
+   PROFESSIONAL FADE-IN ANIMATIONS
+   =========================== */
+
+/* Fade-in upward */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in subtle */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply to main containers */
+header.container.active,
+section.container.active {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Titles slide up */
+.main-title h2 {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+/* Professional spacing */
+.container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Portfolio items animation */
+.portfolio-item {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+}
+
+/* Staggered animation using nth-child */
+.portfolio-item:nth-child(1) { animation-delay: 0.1s; }
+.portfolio-item:nth-child(2) { animation-delay: 0.2s; }
+.portfolio-item:nth-child(3) { animation-delay: 0.3s; }
+.portfolio-item:nth-child(4) { animation-delay: 0.4s; }
+.portfolio-item:nth-child(5) { animation-delay: 0.5s; }
+.portfolio-item:nth-child(6) { animation-delay: 0.6s; }
+.portfolio-item:nth-child(7) { animation-delay: 0.7s; }
+.portfolio-item:nth-child(8) { animation-delay: 0.8s; }
+.portfolio-item:nth-child(9) { animation-delay: 0.9s; }
+.portfolio-item:nth-child(10) { animation-delay: 1.0s; }
+
+/* Profile photo fade-in */
+.profile-photo-wrapper {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Smoother theme transition */
+body,
+.container,
+header,
+section {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modify light mode for better polish */
+body.light-mode {
+    background-color: #f4f8ff;
+    color: #0a0a0a;
+}
+
+body.light-mode .portfolio-item {
+    background: #ffffff;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+    background: #f0f0f0;
+    color: #000;
+}
+
+body.light-mode .controls .control {
+    background: #ffffff;
+    color: #000;
+}
+
+/* Section transitions */
+section.container,
+header.container {
+    will-change: opacity, transform;
+}
 
 
