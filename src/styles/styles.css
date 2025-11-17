@@ -40,7 +40,7 @@ a {
     color: inherit;
 }
 
-/* Wrapper for main content (template uses this) */
+/* Wrapper for main content */
 .main-content {
     position: relative;
 }
@@ -406,7 +406,7 @@ a {
     color: var(--color-grey);
 }
 
-/* Hover overlay (template style extension) */
+/* Hover overlay */
 .hover-items {
     position: absolute;
     inset: 0;
@@ -620,6 +620,22 @@ a {
 
 .theme-btn i {
     font-size: 1.1rem;
+}
+
+/* ===========================
+   PAGE SWITCHING (IMPORTANT)
+   =========================== */
+
+/* Hide all main sections (header + content) by default */
+header.container,
+section.container {
+    display: none;
+}
+
+/* Show only the one with .active (JS toggles this) */
+header.container.active,
+section.container.active {
+    display: block;
 }
 
 /* ===========================
