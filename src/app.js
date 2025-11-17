@@ -26,7 +26,7 @@
         });
     }
 
-    // ========= REVEAL ON SCROLL (smooth animations) =========
+    // ========= REVEAL ON SCROLL =========
     const revealElements = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver(
@@ -43,7 +43,6 @@
 
         revealElements.forEach(el => observer.observe(el));
     } else {
-        // Fallback
         revealElements.forEach(el => el.classList.add("reveal-visible"));
     }
 
@@ -98,7 +97,6 @@
 
     if (typeof emailjs !== "undefined") {
         // TODO: replace with your EmailJS Public Key
-        // Get this from EmailJS dashboard (Account > API Keys)
         emailjs.init("YOUR_PUBLIC_KEY_HERE");
     }
 
@@ -140,4 +138,5 @@
         });
     }
 })();
+
 
