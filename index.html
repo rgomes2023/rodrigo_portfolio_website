@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <!-- TIMELINE (REAL ONE) -->
+            <!-- TIMELINE -->
             <h4 class="stat-title">My Timeline</h4>
 
             <div class="timeline reveal">
@@ -241,7 +241,6 @@
             </h2>
 
             <div class="portfolios reveal">
-                <!-- Each portfolio-item opens a modal (click anywhere except links) -->
 
                 <div class="portfolio-item"
                      data-modal-title="SkyStream AWS Cloud Migration"
@@ -369,6 +368,7 @@
                 </div>
 
                 <div class="contact-content-con reveal">
+                    <!-- LEFT SIDE -->
                     <div class="left-contact">
                         <h4>Let's Connect</h4>
                         <p>
@@ -376,28 +376,57 @@
                             Feel free to reach out — I'm always excited to collaborate!
                         </p>
 
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon"><i class="fas fa-map-marker-alt"></i><span>Location</span></div>
-                                <p>: Bordon, England</p>
+                        <!-- Card-style info -->
+                        <div class="contact-info-grid">
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-card-body">
+                                    <h5>Location</h5>
+                                    <p>Bordon, England</p>
+                                </div>
                             </div>
 
-                            <div class="contact-item">
-                                <div class="icon"><i class="fas fa-envelope"></i><span>Email</span></div>
-                                <p>: rodrigosgomes21@gmail.com</p>
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-card-body">
+                                    <h5>Email</h5>
+                                    <p>rodrigosgomes21@gmail.com</p>
+                                </div>
                             </div>
 
-                            <div class="contact-item">
-                                <div class="icon"><i class="fas fa-phone"></i><span>Phone</span></div>
-                                <p>: +44 07480239118</p>
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-card-body">
+                                    <h5>Phone</h5>
+                                    <p>+44 07480239118</p>
+                                </div>
                             </div>
 
-                            <div class="contact-item">
-                                <div class="icon"><i class="fas fa-globe"></i><span>Languages</span></div>
-                                <p>: English, Portuguese</p>
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="contact-card-body">
+                                    <h5>Languages</h5>
+                                    <p>English, Portuguese</p>
+                                </div>
                             </div>
                         </div>
 
+                        <!-- Availability chips -->
+                        <div class="contact-availability">
+                            <span class="pill">Open to Cloud Roles</span>
+                            <span class="pill">Cyber Security</span>
+                            <span class="pill">Data &amp; BI</span>
+                        </div>
+
+                        <!-- Social Icons -->
                         <div class="contact-icons">
                             <div class="contact-icon">
                                 <a href="https://www.linkedin.com/in/rodrigo-gomes-9030b1340" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -407,15 +436,15 @@
                         </div>
                     </div>
 
+                    <!-- RIGHT SIDE FORM -->
                     <div class="right-contact">
-                        <!-- EMAILJS form -->
                         <form id="contact-form" class="contact-form">
-                            <div class="input-control i-c-2">
+                            <div class="input-control">
                                 <label for="user_name">Your Name</label>
                                 <input id="user_name" type="text" name="user_name" required placeholder="Your Name">
                             </div>
 
-                            <div class="input-control i-c-2">
+                            <div class="input-control">
                                 <label for="user_email">Your Email</label>
                                 <input id="user_email" type="email" name="user_email" required placeholder="Your Email">
                             </div>
@@ -440,7 +469,6 @@
                             <p id="form-status" class="form-status"></p>
                         </form>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -478,6 +506,7 @@
     <script src="src/app.js"></script>
 </body>
 </html>
+
 
 
 
