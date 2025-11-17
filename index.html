@@ -2,201 +2,463 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodrigo Gomes | Cloud Engineer</title>
+    <title>Rodrigo Gomes - Cloud Engineer Portfolio</title>
 
     <link rel="stylesheet" href="src/styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="main-content">
 
-<!-- ===================== HOME ===================== -->
-<header class="container active" id="home" data-section>
-    <div class="home-wrapper">
+    <!-- HOME -->
+    <header class="container header active" id="home">
 
-        <div class="home-left">
-            <div class="profile-photo-wrapper">
-                <img src="src/img/profile.jpg" class="profile-photo" alt="Rodrigo Gomes">
+        <div id="particles-js" class="particle-bg"></div>
+
+        <div class="header-content">
+
+            <div class="left-header">
+                <div class="profile-photo-wrapper">
+                    <img src="src/img/profile.jpg" alt="Rodrigo Gomes" class="profile-photo">
+                </div>
             </div>
-        </div>
 
-        <div class="home-right">
-            <h1 class="home-title">Hi, I'm <span>Rodrigo Gomes</span></h1>
-            <h3 class="home-role">Cloud Engineer & Cyber Security Trainee</h3>
+            <div class="right-header">
+                <h1 class="name">Hi, I'm <span>Rodrigo Gomes.</span></h1>
+                <h2 class="career-title">Cloud Engineer & Cyber Security Trainee</h2>
 
-            <p class="home-desc">
-                I build secure and scalable Cloud solutions using AWS, automation, networking, and DevOps practices.
-                I enjoy creating technical projects such as VPC architectures, CI/CD pipelines, IoT systems, and cloud
-                security labs.
-            </p>
+                <p>
+                    I build secure, scalable cloud solutions using AWS, automation, and DevOps practices.  
+                    Passionate about cloud architecture, security, and hands-on engineering projects.
+                </p>
 
-            <a href="src/img/cv_rodrigo_updated_dec.pdf" class="main-btn" target="_blank">
-                <span class="btn-text">Download CV</span>
-                <span class="btn-icon"><i class="fas fa-download"></i></span>
-            </a>
-        </div>
-
-    </div>
-</header>
-
-<!-- ===================== ABOUT ===================== -->
-<section class="container" id="about" data-section>
-    <div class="main-title">
-        <h2>About <span>Me</span></h2>
-    </div>
-
-    <div class="about-grid">
-
-        <div class="about-left">
-            <h3>Who I Am</h3>
-            <p>
-                I’m an aspiring Cloud Engineer currently studying Digital Technologies (Cyber Security) at
-                Global Banking School, London.
-                I apply hands-on skills in AWS, DevOps, IoT, Windows Server hardening, and BI dashboards to real-world projects.
-            </p>
-
-            <a href="src/img/cv_rodrigo_updated_dec.pdf" class="main-btn" target="_blank">
-                <span class="btn-text">Download CV</span>
-                <span class="btn-icon"><i class="fas fa-download"></i></span>
-            </a>
-        </div>
-
-        <div class="about-right">
-            <div class="stat-box">
-                <p class="large-text">30+</p>
-                <p class="small-text">Projects Completed</p>
+                <div class="btn-con">
+                    <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
             </div>
-            <div class="stat-box">
-                <p class="large-text">5+</p>
-                <p class="small-text">Cloud & Security Use Cases</p>
+
+        </div>
+
+    </header>
+
+    <!-- PARTICLES JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: { number: { value: 80 }, size: { value: 3 }, move: { speed: 2 } }
+        });
+    </script>
+
+    <main>
+
+        <!-- ABOUT -->
+        <section class="container about" id="about">
+            <div class="main-title">
+                <h2>About <span>Me</span></h2>
             </div>
-        </div>
-    </div>
 
-    <h3 class="stat-title">Skills</h3>
-    <div class="skills-grid">
-        <div class="skill"><span>AWS Cloud Architecture</span><div class="bar"><span style="width:85%"></span></div></div>
-        <div class="skill"><span>DevOps & CI/CD</span><div class="bar"><span style="width:80%"></span></div></div>
-        <div class="skill"><span>Cloud Security & IAM</span><div class="bar"><span style="width:78%"></span></div></div>
-        <div class="skill"><span>Networking & VPCs</span><div class="bar"><span style="width:82%"></span></div></div>
-    </div>
-</section>
+            <div class="about-container">
 
-<!-- ===================== PORTFOLIO ===================== -->
-<section class="container" id="portfolio" data-section>
-    <div class="main-title">
-        <h2>My <span>Projects</span></h2>
-    </div>
+                <div class="left-about">
+                    <h4>About Me</h4>
 
-    <div class="portfolio-grid">
+                    <p>
+                        I’m an aspiring Cloud Engineer with a strong foundation in AWS, cyber security, DevOps, and data technologies.  
+                        I am currently studying an HND in Digital Technologies (Cyber Security) at Global Banking School in London, 
+                        where I apply hands-on learning directly to real-world projects.
+                        <br><br>
+                        I have delivered practical solutions such as AWS VPC deployments, CI/CD pipelines, IoT smart bin automation, 
+                        business intelligence dashboards, and secure Windows Server environments.
+                        <br><br>
+                        My goal is to design secure, scalable, and efficient cloud architectures that help organisations innovate and grow.
+                    </p>
 
-        <div class="portfolio-card">
-            <img src="src/img/port1.png">
-            <h4>AWS VPC Migration & Architecture</h4>
-            <p>Secure VPC with subnets, EC2, NAT, routing + security groups.</p>
-        </div>
-
-        <div class="portfolio-card">
-            <img src="src/img/port2.png">
-            <h4>IoT Smart Bin</h4>
-            <p>Ultrasonic sensor, servo lid, LED and buzzer automation.</p>
-        </div>
-
-        <div class="portfolio-card">
-            <img src="src/img/port3.png">
-            <h4>AWS Security Lab</h4>
-            <p>IAM, MFA, encryption, access control and monitoring.</p>
-        </div>
-
-        <div class="portfolio-card">
-            <img src="src/img/port4.png">
-            <h4>GitHub Actions CI/CD</h4>
-            <p>Automated deployment pipeline for web applications.</p>
-        </div>
-
-        <div class="portfolio-card">
-            <img src="src/img/port5.png">
-            <h4>Power BI Dashboard</h4>
-            <p>Interactive sales and store analytics dashboard.</p>
-        </div>
-
-        <div class="portfolio-card">
-            <img src="src/img/port7.png">
-            <h4>Windows Server Security Lab</h4>
-            <p>GPOs, password rules, audit logs, USB restrictions.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- ===================== CONTACT ===================== -->
-<section class="container" id="contact" data-section>
-    <div class="main-title center-title">
-        <h2>Hire <span>Me</span></h2>
-    </div>
-
-    <div class="contact-wrapper">
-
-        <!-- LEFT CARD -->
-        <div class="contact-card info-card">
-            <h3>Let's Connect</h3>
-            <p class="contact-intro">
-                Reach out if you'd like to collaborate, discuss cloud projects, or talk about AWS & Cyber Security.
-            </p>
-
-            <ul class="info-list">
-                <li><i class="fas fa-map-marker-alt"></i> Bordon, England</li>
-                <li><i class="fas fa-envelope"></i> rodrigosgomes21@gmail.com</li>
-                <li><i class="fas fa-phone"></i> +44 07480239118</li>
-                <li><i class="fas fa-language"></i> English, Portuguese</li>
-            </ul>
-
-            <div class="contact-icons">
-                <a href="https://www.linkedin.com/in/rodrigo-gomes-9030b1340" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/rgomes2023" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:rodrigosgomes21@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-
-        <!-- RIGHT CARD -->
-        <div class="contact-card form-card">
-            <form class="contact-form">
-                <div class="input-row">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
+                    <div class="btn-con">
+                        <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
+                            <span class="btn-text">Download CV</span>
+                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                        </a>
+                    </div>
                 </div>
 
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Your Message..." required></textarea>
+                <div class="right-about">
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">30+</p>
+                            <p class="small-text">Projects Completed</p>
+                        </div>
+                    </div>
 
-                <button class="send-btn" type="submit" disabled>
-                    Send Message <i class="fas fa-paper-plane"></i>
-                </button>
-                <p class="form-note">*Static form — can be activated with EmailJS or AWS SES.</p>
-            </form>
-        </div>
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">5+</p>
+                            <p class="small-text">Cloud & Security<br>Use Cases Delivered</p>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+
+            <!-- SKILLS -->
+            <h4 class="stat-title">My Skills</h4>
+            <div class="progress-bars">
+
+                <div class="progress-bar">
+                    <p class="prog-title">AWS Cloud Architecture</p>
+                    <div class="progress-con">
+                        <p class="prog-text">85%</p>
+                        <div class="progress"><span class="python"></span></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <p class="prog-title">DevOps & CI/CD Pipelines</p>
+                    <div class="progress-con">
+                        <p class="prog-text">80%</p>
+                        <div class="progress"><span class="html"></span></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <p class="prog-title">Infrastructure as Code (IaC)</p>
+                    <div class="progress-con">
+                        <p class="prog-text">75%</p>
+                        <div class="progress"><span class="css"></span></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <p class="prog-title">Cloud Security & IAM</p>
+                    <div class="progress-con">
+                        <p class="prog-text">78%</p>
+                        <div class="progress"><span class="js"></span></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <p class="prog-title">Networking & VPC Design</p>
+                    <div class="progress-con">
+                        <p class="prog-text">82%</p>
+                        <div class="progress"><span class="react"></span></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <p class="prog-title">Automation (Python/Bash)</p>
+                    <div class="progress-con">
+                        <p class="prog-text">70%</p>
+                        <div class="progress"><span class="node"></span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TIMELINE -->
+            <h4 class="stat-title">My Timeline</h4>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
+                    <p class="tl-duration">2025 - Present</p>
+                    <h5>Graduate Trainee Cyber Security Analyst<span> - CyberGuard Solutions</span></h5>
+                    <p>
+                        Working with cloud and cyber security tools, analysing threats, configuring secure environments, 
+                        and improving incident response workflows.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-user-graduate"></i></div>
+                    <p class="tl-duration">2024 - Present</p>
+                    <h5>HND Digital Technologies<span> - Global Banking School, London</span></h5>
+                    <p>
+                        Learning cloud infrastructure, networking, DevOps, data, and security through hands-on
+                        assignments and real-world projects.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
+                    <p class="tl-duration">2023 - 2024</p>
+                    <h5>Software Developer<span> - Brighter SW Ltd</span></h5>
+                    <p>
+                        Built an automated tax processing solution, streamlining manual procedures and improving accuracy.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-icon"><i class="fas fa-laptop-code"></i></div>
+                    <p class="tl-duration">2023 - Present</p>
+                    <h5>Cloud, IoT & Security Projects<span> - Personal & Academic</span></h5>
+                    <p>
+                        Delivered practical projects such as AWS VPC architecture, IoT Smart Bin automation,
+                        Windows Server labs, BI dashboards, and security implementations.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="container" id="portfolio">
+            <div class="main-title">
+                <h2>My <span>Portfolio</span></h2>
+            </div>
+
+            <div class="portfolios">
+
+                <!-- Project 1 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port1.png"></div>
+                    <div class="portfolio-text">
+                        <h4>AWS VPC Migration & Architecture</h4>
+                        <p>Designed and deployed a secure VPC with subnets, EC2, NAT Gateway, load balancer and security groups.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port2.png"></div>
+                    <div class="portfolio-text">
+                        <h4>Smart Bin IoT Prototype</h4>
+                        <p>IoT smart bin built with Arduino, ultrasonic sensor, servo lid, LED indicators and buzzer alerts.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port3.png"></div>
+                    <div class="portfolio-text">
+                        <h4>AWS Cloud Security Lab</h4>
+                        <p>Configured IAM roles, MFA, encryption, VPC Flow Logs and monitoring within AWS.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port4.png"></div>
+                    <div class="portfolio-text">
+                        <h4>CI/CD Pipeline with GitHub Actions</h4>
+                        <p>Automated deployment pipeline for this portfolio using GitHub Actions.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port5.png"></div>
+                    <div class="portfolio-text">
+                        <h4>Business Intelligence Dashboard</h4>
+                        <p>Interactive Power BI dashboard analysing sales, products and store performance.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port7.png"></div>
+                    <div class="portfolio-text">
+                        <h4>Windows Server & Domain Security Lab</h4>
+                        <p>Configured GPOs, password rules, auditing, USB restrictions and domain security.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port2.png"></div>
+                    <div class="portfolio-text">
+                        <h4>CareConnect Digital Transformation (SLHN)</h4>
+                        <p>Complete digital transformation proposal including telemedicine, AI analytics, ROI and KPIs.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port3.png"></div>
+                    <div class="portfolio-text">
+                        <h4>Cloud Threat Assessment (Innovate Ltd)</h4>
+                        <p>Analysed cloud vulnerabilities including IAM weaknesses, SQL injection and misconfigurations.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port1.png"></div>
+                    <div class="portfolio-text">
+                        <h4>SmartChoice Work-Based Dashboard</h4>
+                        <p>Dashboard for operational insights, improving decision-making at SmartChoice Ltd.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons"><a class="icon" href="#"><i class="fab fa-github"></i></a></div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="portfolio-item">
+                    <div class="image"><img src="src/img/port4.png"></div>
+                    <div class="portfolio-text">
+                        <h4>Portfolio Website (This Site)</h4>
+                        <p>Designed and deployed this full portfolio using HTML, CSS, JS and GitHub Pages.</p>
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a class="icon" href="https://github.com/rgomes2023/portfolio-website" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section class="container contact" id="contact">
+            <div class="contact-container">
+
+                <div class="main-title">
+                    <h2>Hire <span>Me</span></h2>
+                </div>
+
+                <div class="contact-content-con">
+
+                    <div class="left-contact">
+                        <h4>Let's Connect</h4>
+                        <p>
+                            Feel free to reach out if you want to collaborate, discuss cloud projects,
+                            or talk about AWS & Cyber Security.
+                        </p>
+
+                        <div class="contact-info">
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fas fa-map-marker-alt"></i><span>Location:</span></div>
+                                <p>Bordon, England</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fas fa-envelope"></i><span>Email:</span></div>
+                                <p>rodrigosgomes21@gmail.com</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fas fa-phone"></i><span>Phone:</span></div>
+                                <p>+44 07480239118</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fas fa-globe"></i><span>Languages:</span></div>
+                                <p>English, Portuguese</p>
+                            </div>
+
+                        </div>
+
+                        <!-- UPDATED SOCIAL ICONS -->
+                        <div class="contact-icons">
+                            <a href="https://www.linkedin.com/in/rodrigo-gomes-9030b1340" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/rgomes2023" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:rodrigosgomes21@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="right-contact">
+                        <form class="contact-form">
+
+                            <div class="input-control i-c-2">
+                                <input type="text" required placeholder="Your Name">
+                                <input type="email" required placeholder="Your Email">
+                            </div>
+
+                            <div class="input-control">
+                                <input type="text" required placeholder="Subject">
+                            </div>
+
+                            <div class="input-control">
+                                <textarea cols="30" rows="5" placeholder="Your Message..."></textarea>
+                            </div>
+
+                            <div class="submit-btn">
+                                <button type="submit" class="main-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- NAVIGATION BUTTONS -->
+    <div class="controls">
+        <div class="control active-btn" data-id="home"><i class="fas fa-home"></i></div>
+        <div class="control" data-id="about"><i class="fas fa-user"></i></div>
+        <div class="control" data-id="portfolio"><i class="fas fa-briefcase"></i></div>
+        <div class="control" data-id="contact"><i class="fas fa-envelope-open"></i></div>
     </div>
-</section>
 
-<!-- ===================== NAVIGATION BUTTONS ===================== -->
-<div class="controls">
-    <div class="control active-btn" data-id="home"><i class="fas fa-home"></i></div>
-    <div class="control" data-id="about"><i class="fas fa-user"></i></div>
-    <div class="control" data-id="portfolio"><i class="fas fa-briefcase"></i></div>
-    <div class="control" data-id="contact"><i class="fas fa-envelope-open"></i></div>
-</div>
+    <!-- THEME SWITCH -->
+    <div class="theme-btn"><i class="fas fa-adjust"></i></div>
 
-<!-- THEME SWITCH -->
-<div class="theme-btn"><i class="fas fa-adjust"></i></div>
-
-<script src="src/app.js"></script>
+    <!-- Load JS LAST for everything to work -->
+    <script src="src/app.js" defer></script>
 
 </body>
 </html>
-
 
 
 
