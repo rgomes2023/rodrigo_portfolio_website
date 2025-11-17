@@ -5,36 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodrigo Gomes - Cloud Engineer Portfolio</title>
+
     <link rel="stylesheet" href="src/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body class="main-content">
+
+    <!-- ========================= HEADER / HOME ========================= -->
     <header class="container header active" id="home">
         <div id="particles-js" class="particle-bg"></div>
+
         <div class="header-content">
-            <!-- Left Section: Profile Photo -->
+
+            <!-- LEFT -->
             <div class="left-header">
                 <div class="profile-photo-wrapper">
                     <img src="src/img/profile.jpg" alt="Rodrigo Gomes" class="profile-photo">
                 </div>
             </div>
 
-            <!-- Right Section: Introduction -->
+            <!-- RIGHT -->
             <div class="right-header">
-                <h1 class="name">
-                    Hi there,
-                    I'm <span>Rodrigo Gomes.</span>
-                </h1>
-                <h1 class="name">
-                    A Cloud Engineer.
-                </h1>
+                <h1 class="name">Hi there, I'm <span>Rodrigo Gomes.</span></h1>
+                <h1 class="name">A Cloud Engineer.</h1>
+
                 <p>
-                    I'm an aspiring Cloud Engineer passionate about building scalable, secure, and efficient cloud solutions. 
-                    From architecting seamless infrastructures to automating deployments, I thrive on optimising the cloud to deliver efficiency and innovation.
+                    "I'm an aspiring Cloud Engineer passionate about building scalable, secure, 
+                    and efficient cloud solutions. From architecting infrastructures to automating 
+                    deployments, I thrive on optimizing cloud environments through innovation."
                 </p>
+
                 <div class="btn-con">
                     <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
                         <span class="btn-text">Download CV</span>
@@ -42,35 +47,37 @@
                     </a>
                 </div>
             </div>
+
         </div>
     </header>
 
-    <!-- Particles.js -->
+    <!-- Particles Background -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
-            particles: {
-                number: { value: 80 },
-                size: { value: 3 },
-                move: { speed: 2 }
-            }
+            particles: { number: { value: 80 }, size: { value: 3 }, move: { speed: 2 } }
         });
     </script>
 
+
+
+    <!-- ========================= ABOUT ========================= -->
     <main>
-        <!-- ABOUT -->
         <section class="container about" id="about">
             <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text"></span></h2>
+                <h2>About <span>Me</span></h2>
             </div>
+
             <div class="about-container">
+
                 <div class="left-about">
-                    <h4>About me</h4>
+                    <h4>About Me</h4>
                     <p>
                         I’m passionate about applying hands-on learning to real-world projects, 
-                        such as designing, developing, and deploying applications, automating infrastructure with Terraform,
-                        and building CI/CD pipelines that bring reliability and speed to delivery.
+                        including designing and deploying cloud environments, developing applications, 
+                        automating infrastructure with Terraform, and building CI/CD pipelines.
                     </p>
+
                     <div class="btn-con">
                         <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
                             <span class="btn-text">Download CV</span>
@@ -78,155 +85,142 @@
                         </a>
                     </div>
                 </div>
+
                 <div class="right-about">
+
                     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">30+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
+                            <p class="small-text">Projects Completed</p>
                         </div>
                     </div>
-                    
+
                     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">5+</p>
-                            <p class="small-text">Freelance Clients<br /> Helped in Cloud Migration & Optimisation</p>
+                            <p class="small-text">Freelance Cloud Clients</p>
                         </div>
                     </div>
+
                 </div>
             </div>
 
+            <!-- SKILLS -->
             <div class="about-stats">
                 <h4 class="stat-title">My Skills</h4>
+
                 <div class="progress-bars">
                     <div class="progress-bar">
                         <p class="prog-title">Software Development</p>
                         <div class="progress-con">
                             <p class="prog-text">80%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
+                            <div class="progress"><span class="python"></span></div>
                         </div>
                     </div>
+
                     <div class="progress-bar">
                         <p class="prog-title">APIs & Microservices</p>
                         <div class="progress-con">
                             <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
+                            <div class="progress"><span class="html"></span></div>
                         </div>
                     </div>
+
                     <div class="progress-bar">
                         <p class="prog-title">DevOps & CI/CD</p>
                         <div class="progress-con">
                             <p class="prog-text">85%</p>
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
+                            <div class="progress"><span class="css"></span></div>
                         </div>
                     </div>
+
                     <div class="progress-bar">
-                        <p class="prog-title">Cloud Platforms & Architecture</p>
+                        <p class="prog-title">Cloud Architecture</p>
                         <div class="progress-con">
                             <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="js"></span>
-                            </div>
+                            <div class="progress"><span class="js"></span></div>
                         </div>
                     </div>
+
                     <div class="progress-bar">
-                        <p class="prog-title">Cloud Security & Networking</p>
+                        <p class="prog-title">Cloud Security</p>
                         <div class="progress-con">
                             <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
+                            <div class="progress"><span class="react"></span></div>
                         </div>
                     </div>
+
                     <div class="progress-bar">
                         <p class="prog-title">Infrastructure as Code</p>
                         <div class="progress-con">
                             <p class="prog-text">78%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
+                            <div class="progress"><span class="node"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+            <!-- TIMELINE -->
             <h4 class="stat-title">My Timeline</h4>
+
             <div class="timeline">
+
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
                     <p class="tl-duration">2023 - 2024</p>
-                    <h5>Software Development Intern<span> - AWS</span></h5>
-                    <p>
-                        Designed and developed full-stack projects with a focus on reliability and scalability.
-                    </p>
+                    <h5>Software Development Intern <span>- AWS</span></h5>
+                    <p>Designed and developed full-stack applications using cloud technologies.</p>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
                     <p class="tl-duration">2022 - 2023</p>
-                    <h5>Cloud Trainee<span> - AWS Apprenticeship</span></h5>
-                    <p>
-                        Gained project-based experience in AWS cloud and DevOps practices.
-                    </p>
+                    <h5>Cloud Trainee <span>- AWS Apprenticeship</span></h5>
+                    <p>Hands-on cloud and DevOps project experience in AWS.</p>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
                     <p class="tl-duration">2018 - 2022</p>
-                    <h5>Computer Science Degree <span> - Chandigarh University</span></h5>   
-                    <p>
-                        Learned core computing concepts, programming, software development, and DevOps foundations.
-                    </p>
+                    <h5>Computer Science Degree <span>- Chandigarh University</span></h5>
+                    <p>Studied programming, cloud, DevOps and software engineering.</p>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2017 - present</p>
-                    <h5>Masters in Computer Science<span> - IIM Bangalore</span></h5>
-                    <p>
-                        Studied advanced topics in programming, distributed systems, and modern software engineering.
-                    </p>
+                    <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
+                    <p class="tl-duration">2017 - Present</p>
+                    <h5>Masters in Computer Science <span>- IIM Bangalore</span></h5>
+                    <p>Learned advanced programming and modern development practices.</p>
                 </div>
+
             </div>
         </section>
 
-        <!-- PORTFOLIO -->
+
+
+        <!-- ========================= PORTFOLIO ========================= -->
         <section class="container" id="portfolio">
             <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text"></span></h2>
+                <h2>My <span>Portfolio</span></h2>
             </div>
+
             <h2 class="port-text">
-                <i>
-                    "Here are some of the projects where I’ve applied cloud, DevOps, security, 
-                    and data skills to solve real problems for organisations and in my academic work."
-                </i>
+                <i>Here are some of my real cloud, DevOps, BI and IoT projects.</i>
             </h2>
 
             <div class="portfolios">
-                <!-- Portfolio Item 1 -->
+
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="src/img/port1.png" alt="SkyStream AWS Cloud Migration">
+                        <img src="src/img/port1.png">
                     </div>
                     <div class="portfolio-text">
                         <h4>SkyStream AWS Cloud Migration</h4>
-                        <p>
-                            Designed a secure AWS VPC with public and private subnets, EC2 web servers,
-                            internet/NAT gateways, and load balancing to support a highly available web application.
-                        </p>
+                        <p>Designed a secure AWS VPC with public/private subnets, EC2 web servers, NAT, IGW, and load balancing.</p>
                     </div>
                     <div class="hover-items">
-                        <h3>Project Details</h3>
+                        <h3>Project Source</h3>
                         <div class="icons">
                             <a href="#" class="icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
@@ -234,21 +228,16 @@
                     </div>
                 </div>
 
-                <!-- Portfolio Item 2 -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="src/img/port2.png" alt="IoT Smart Bin Prototype">
+                        <img src="src/img/port2.png">
                     </div>
                     <div class="portfolio-text">
                         <h4>IoT Smart Bin Prototype</h4>
-                        <p>
-                            Built an Arduino-based smart bin using an ultrasonic sensor, servo motor, LED,
-                            and buzzer to automatically open the lid when a user is detected and improve
-                            waste management efficiency.
-                        </p>
+                        <p>Arduino smart bin with ultrasonic sensor, servo, buzzer and LED for automated lid control.</p>
                     </div>
                     <div class="hover-items">
-                        <h3>Project Details</h3>
+                        <h3>Project Source</h3>
                         <div class="icons">
                             <a href="#" class="icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
@@ -256,20 +245,16 @@
                     </div>
                 </div>
 
-                <!-- Portfolio Item 3 -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="src/img/port3.png" alt="SmartChoice Retail BI Dashboard">
+                        <img src="src/img/port3.png">
                     </div>
                     <div class="portfolio-text">
                         <h4>SmartChoice Retail BI Dashboard</h4>
-                        <p>
-                            Developed an interactive sales dashboard using Power BI to analyse performance 
-                            by store, product, and time period, helping decision-makers optimise stock and promotions.
-                        </p>
+                        <p>Power BI dashboard analysing store sales, product performance, stock and trends.</p>
                     </div>
                     <div class="hover-items">
-                        <h3>Project Details</h3>
+                        <h3>Project Source</h3>
                         <div class="icons">
                             <a href="#" class="icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
@@ -277,21 +262,16 @@
                     </div>
                 </div>
 
-                <!-- Portfolio Item 4 -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="src/img/port4.png" alt="Innovate Ltd Cloud Security Assessment">
+                        <img src="src/img/port4.png">
                     </div>
                     <div class="portfolio-text">
                         <h4>Innovate Ltd Cloud Security Assessment</h4>
-                        <p>
-                            Performed a detailed threat assessment of an AWS environment, mapping risks 
-                            to CIA, AAA and GDPR, and recommending IAM hardening, GuardDuty, Security Hub,
-                            encryption, and network segmentation.
-                        </p>
+                        <p>AWS threat assessment covering IAM, encryption, network security, monitoring and GDPR.</p>
                     </div>
                     <div class="hover-items">
-                        <h3>Project Details</h3>
+                        <h3>Project Source</h3>
                         <div class="icons">
                             <a href="#" class="icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
@@ -299,21 +279,16 @@
                     </div>
                 </div>
 
-                <!-- Portfolio Item 5 -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="src/img/port5.png" alt="CareConnect Telemedicine Architecture">
+                        <img src="src/img/port5.png">
                     </div>
                     <div class="portfolio-text">
-                        <h4>CareConnect Telemedicine Architecture</h4>
-                        <p>
-                            Designed a cloud-based healthcare platform for Save a Life Hospital Network (SLHN),
-                            integrating telemedicine, remote patient monitoring, and analytics to improve
-                            patient outcomes and operational efficiency.
-                        </p>
+                        <h4>CareConnect Telemedicine System</h4>
+                        <p>Cloud-based architecture for telemedicine and remote monitoring for SLHN.</p>
                     </div>
                     <div class="hover-items">
-                        <h3>Project Details</h3>
+                        <h3>Project Source</h3>
                         <div class="icons">
                             <a href="#" class="icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
@@ -321,136 +296,125 @@
                     </div>
                 </div>
 
-                <!-- Portfolio Item 6 -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="src/img/port7.png" alt="Cloud Engineer Portfolio Website">
+                        <img src="src/img/port7.png">
                     </div>
                     <div class="portfolio-text">
                         <h4>Cloud Engineer Portfolio Website</h4>
-                        <p>
-                            Responsive personal portfolio built with HTML, CSS and JavaScript featuring 
-                            glassmorphism, theme toggling, and particle effects to showcase my cloud,
-                            DevOps, and security projects.
-                        </p>
+                        <p>This modern portfolio built with HTML, CSS, JS, glassmorphism and theme toggling.</p>
                     </div>
                     <div class="hover-items">
-                        <h3>Project Details</h3>
+                        <h3>Project Source</h3>
                         <div class="icons">
                             <a href="#" class="icon"><i class="fab fa-github"></i></a>
                             <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
-            </div> <!-- END .portfolios -->
+
+            </div>
         </section>
 
-        <!-- CONTACT -->
+
+
+        <!-- ========================= CONTACT ========================= -->
         <section class="container contact" id="contact">
             <div class="contact-container">
+
                 <div class="main-title">
-                    <h2>Hire <span>Me</span><span class="bg-text"></span></h2>
+                    <h2>Hire <span>Me</span></h2>
                 </div>
+
                 <div class="contact-content-con">
+
+                    <!-- LEFT -->
                     <div class="left-contact">
                         <h4>Let's Connect</h4>
+
                         <p>
-                            Have a project idea or just want to chat about cloud technologies? 
-                            Feel free to reach out. I'm always excited to collaborate and learn together!
+                            Have a project idea or want to chat about cloud technologies?  
+                            Feel free to reach out — I'm always excited to collaborate!
                         </p>
+
                         <div class="contact-info">
+
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
+                                <div class="icon"><i class="fas fa-map-marker-alt"></i><span>Location</span></div>
                                 <p>: Bordon, England</p>
                             </div>
+
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
+                                <div class="icon"><i class="fas fa-envelope"></i><span>Email</span></div>
                                 <p>: rodrigosgomes21@gmail.com</p>
                             </div>
+
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>: Global Banking School (GBS)</p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-phone"></i>
-                                    <span>Phone</span>
-                                </div>
+                                <div class="icon"><i class="fas fa-phone"></i><span>Phone</span></div>
                                 <p>: +44 07480239118</p>
                             </div>
+
                             <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe"></i>
-                                    <span>Languages</span>
-                                </div>
+                                <div class="icon"><i class="fas fa-globe"></i><span>Languages</span></div>
                                 <p>: English, Portuguese</p>
                             </div>
                         </div>
+
                         <div class="contact-icons">
                             <div class="contact-icon">
-                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/in/rodrigo-gomes" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/RodrigoSGomes" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- RIGHT -->
                     <div class="right-contact">
                         <form action="" class="contact-form">
+
                             <div class="input-control i-c-2">
                                 <input type="text" required placeholder="Your Name">
                                 <input type="email" required placeholder="Your Email">
                             </div>
+
+                            <div class="input-control"><input type="text" required placeholder="Enter Subject"></div>
+
                             <div class="input-control">
-                                <input type="text" required placeholder="Enter Subject">
+                                <textarea cols="30" rows="5" required placeholder="Your Message..."></textarea>
                             </div>
-                            <div class="input-control">
-                                <textarea name="message" id="message" cols="30" rows="5" required placeholder="Your Message..."></textarea>
-                            </div>
+
                             <div class="submit-btn">
                                 <button type="submit" class="main-btn">
                                     <span class="btn-text">Send Message</span>
                                     <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                                 </button>
                             </div>
+
                         </form>
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Controls -->
+
+
+    <!-- ========================= NAVIGATION BUTTONS ========================= -->
     <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
+        <div class="control active-btn" data-id="home"><i class="fas fa-home"></i></div>
+        <div class="control" data-id="about"><i class="fas fa-user"></i></div>
+        <div class="control" data-id="portfolio"><i class="fas fa-briefcase"></i></div>
+        <div class="control" data-id="contact"><i class="fas fa-envelope-open"></i></div>
     </div>
 
-    <!-- Theme Toggle -->
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
+    <!-- THEME SWITCH -->
+    <div class="theme-btn"><i class="fas fa-adjust"></i></div>
 
+    <!-- JAVASCRIPT -->
     <script src="src/app.js"></script>
 </body>
 </html>
+
 
