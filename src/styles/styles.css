@@ -704,5 +704,41 @@ section.container.active {
     }
 }
 
+/* CONTACT SECTION FIX */
+.left-contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* spacing between items */
+    margin-top: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* spacing between icon and text */
+}
+
+.contact-item .icon {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #dcdcdc;
+}
+
+.left-contact h4 {
+    margin-bottom: 0.5rem;
+}
+
+/* SOCIAL ICONS SPACING FIX */
+.contact-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
 
 
