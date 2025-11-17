@@ -3,7 +3,7 @@
     const themeBtn = document.querySelector(".theme-btn");
     const body = document.body;
 
-    // Section switching
+    // ========= SECTION SWITCHING =========
     controls.forEach(button => {
         button.addEventListener("click", function () {
             const currentActiveBtn = document.querySelector(".active-btn");
@@ -11,7 +11,6 @@
             const targetId = this.dataset.id;
             const targetSection = document.getElementById(targetId);
 
-            // Safety checks
             if (currentActiveBtn) currentActiveBtn.classList.remove("active-btn");
             this.classList.add("active-btn");
 
@@ -20,10 +19,125 @@
         });
     });
 
-    // Theme toggle (dark / light mode)
+    // ========= THEME TOGGLE =========
     if (themeBtn) {
         themeBtn.addEventListener("click", () => {
             body.classList.toggle("light-mode");
         });
     }
+
+    // ========= REVEAL ON SCROLL (smooth animations) =========
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("reveal-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback
+        revealElements.forEach(el => el.classList.add("reveal-visible"));
+    }
+
+    // ========= PORTFOLIO MODAL =========
+    const modal = document.getElementById("portfolio-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const modalCloseBtn = document.getElementById("portfolio-modal-close");
+    const modalOverlay = modal ? modal.querySelector(".portfolio-modal-overlay") : null;
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    function openModal(title, description) {
+        if (!modal) return;
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.classList.add("open");
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.classList.remove("open");
+    }
+
+    portfolioItems.forEach(item => {
+        item.addEventListener("click", (e) => {
+            // Avoid triggering when clicking direct links (GitHub/YouTube)
+            const isIconClick = e.target.closest("a");
+            if (isIconClick) return;
+
+            const title = item.dataset.modalTitle || item.querySelector("h4").textContent;
+            const description =
+                item.dataset.modalDescription ||
+                item.querySelector(".portfolio-text p")?.textContent ||
+                "";
+            openModal(title, description);
+        });
+    });
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener("click", closeModal);
+    }
+    if (modalOverlay) {
+        modalOverlay.addEventListener("click", closeModal);
+    }
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+    });
+
+    // ========= EMAILJS CONTACT FORM =========
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    if (typeof emailjs !== "undefined") {
+        // TODO: replace with your EmailJS Public Key
+        // Get this from EmailJS dashboard (Account > API Keys)
+        emailjs.init("YOUR_PUBLIC_KEY_HERE");
+    }
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!emailjs) {
+                if (formStatus) {
+                    formStatus.textContent = "Email service not configured yet.";
+                    formStatus.style.color = "orange";
+                }
+                return;
+            }
+
+            if (formStatus) {
+                formStatus.textContent = "Sending message...";
+                formStatus.style.color = "var(--color-grey-1)";
+            }
+
+            // TODO: replace SERVICE_ID and TEMPLATE_ID with your EmailJS IDs
+            emailjs
+                .sendForm("YOUR_SERVICE_ID_HERE", "YOUR_TEMPLATE_ID_HERE", "#contact-form")
+                .then(
+                    () => {
+                        contactForm.reset();
+                        if (formStatus) {
+                            formStatus.textContent = "Message sent successfully! ✅";
+                            formStatus.style.color = "lightgreen";
+                        }
+                    },
+                    (error) => {
+                        console.error("EmailJS error:", error);
+                        if (formStatus) {
+                            formStatus.textContent = "Something went wrong. Please try again.";
+                            formStatus.style.color = "tomato";
+                        }
+                    }
+                );
+        });
+    }
 })();
+
