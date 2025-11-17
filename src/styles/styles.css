@@ -1432,6 +1432,12 @@ section {
     }
 }
 
+.career-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
 
 
 /*# sourceMappingURL=styles.css.map */
