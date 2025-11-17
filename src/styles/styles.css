@@ -1315,6 +1315,123 @@ section {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   background-size: 300% 300%;
   animation: gradientFlow 10s infinite alternate ease-in-out;
+
+  
+  /* --- HERO LAYOUT TWEAKS --- */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
 }
+
+.right-header {
+    max-width: 520px;
+}
+
+/* --- PROFILE PHOTO STYLES --- */
+
+.profile-photo-wrapper {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 4px;                     /* space for gradient ring */
+    background: radial-gradient(circle at top left,
+        var(--color-secondary),
+        #00c9ff,
+        #001527);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.55);
+    animation: photo-glow 4s ease-in-out infinite;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Soft pulsing glow */
+@keyframes photo-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 201, 255, 0.4);
+        transform: translateY(0);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(0, 201, 255, 0.8);
+        transform: translateY(-4px);
+    }
+/* --- CTA BUTTON ENHANCEMENTS --- */
+
+.main-btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 10px 25px rgba(0, 201, 255, 0.45);
+}
+
+.main-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+}
+
+.main-btn:hover::before {
+    left: 150%;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 201, 255, 0.7);
+}
+
+  /* --- RESPONSIVE HERO --- */
+
+@media screen and (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .right-header {
+        max-width: 90%;
+    }
+
+    .name {
+        font-size: 2.1rem;
+        line-height: 1.25;
+    }
+
+    .profile-photo-wrapper {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .right-header p {
+        font-size: 0.95rem;
+    }
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */
