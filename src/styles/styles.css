@@ -1,88 +1,60 @@
-/* ==========================================================
-   Rodrigo Gomes Portfolio - FIXED + OPTIMIZED STYLES
-   Light Mode Default | Dark Mode Supported
-========================================================== */
-
-/* ---------- RESET ---------- */
+/* ===============================
+   GLOBAL RESET
+================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: #f4f6f9;
-    color: #1c1c1c;
-    transition: background 0.3s, color 0.3s;
+    font-family: "Poppins", sans-serif;
+    background-color: #0b1628;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* ---------- DARK MODE ---------- */
-body.light-mode {
-    background: #111827;
-    color: #ececec;
-}
-
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode p {
-    color: #ffffff;
-}
-
-/* ---------- GLOBAL LAYOUT ---------- */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 60px;
-}
-
-/* ---------- PAGE SECTIONS (FIXED) ---------- */
+/* ===============================
+   SECTION VISIBILITY FIX ✔
+================================== */
 [data-section] {
     display: none;
     opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px);
+    transition: all 0.35s ease-in-out;
 }
 
+/* SECTION ACTIVE */
 .active-section {
-    display: block;
+    display: block !important;
     opacity: 1 !important;
-    transform: translateY(0);
+    transform: translateY(0px) !important;
 }
 
-/* ---------- TITLES ---------- */
-.main-title h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-
-.main-title h2 span {
-    color: #1e90ff;
-}
-
-/* ---------- HOME SECTION ---------- */
+/* ===============================
+   HEADER SECTION
+================================== */
 .header {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
+.header-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
 .profile-photo-wrapper {
-    width: 320px;
-    height: 320px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
+    border: 4px solid #1e90ff;
     overflow: hidden;
-    border: 6px solid #1e90ff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .profile-photo {
@@ -91,287 +63,162 @@ body.light-mode p {
     object-fit: cover;
 }
 
-.right-header {
-    margin-left: 50px;
-}
-
-.name {
+/* ===============================
+   TITLES
+================================== */
+.main-title h2 {
     font-size: 2.5rem;
-    line-height: 3.2rem;
-    font-weight: 700;
+    margin-bottom: 2rem;
 }
 
-.name span {
+.main-title span {
     color: #1e90ff;
 }
 
-.career-title {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* ---------- BUTTONS ---------- */
-.btn-con {
-    margin-top: 20px;
-}
-
-.main-btn {
-    display: inline-flex;
-    align-items: center;
-    background: #1e90ff;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: background 0.2s;
-}
-
-.main-btn:hover {
-    background: #0d6efd;
-}
-
-.main-btn .btn-icon {
-    margin-left: 10px;
-}
-
-/* ---------- SKILLS ---------- */
-.progress-bars {
-    margin-top: 40px;
-}
-
-.progress-bar {
-    margin-bottom: 20px;
-}
-
-.prog-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.progress-con {
+/* ===============================
+   ABOUT
+================================== */
+.about-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 4rem;
+    padding-top: 2rem;
 }
 
-.progress {
-    width: 70%;
-    height: 10px;
-    background: #d0d7e2;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress span {
-    display: block;
-    height: 100%;
-    background: #1e90ff;
-    border-radius: 10px;
-}
-
-/* ---------- TIMELINE ---------- */
-.timeline {
-    margin-top: 40px;
-}
-
-.timeline-item {
-    padding: 20px 30px;
-    border-left: 3px solid #1e90ff;
-    margin-bottom: 30px;
-}
-
-.tl-icon {
-    font-size: 1.4rem;
-    color: #1e90ff;
-    margin-bottom: 5px;
-}
-
-.tl-duration {
-    font-weight: 600;
-    opacity: 0.7;
-}
-
-/* ---------- PORTFOLIO GRID ---------- */
+/* ===============================
+   PORTFOLIO GRID
+================================== */
 .portfolios {
+    margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .portfolio-item {
-    background: white;
+    background-color: #13203a;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #e5e5e5;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    transition: transform 0.3s;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
 }
 
-.portfolio-item img {
+.portfolio-item .image img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-.portfolio-text {
-    padding: 18px;
-}
-
-.portfolio-text h4 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-}
-
 .hover-items {
-    background: rgba(0,0,0,0.75);
-    height: 100%;
-    width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity .3s ease;
+    opacity: 0;
+    transition: 0.3s ease;
 }
 
 .portfolio-item:hover .hover-items {
     opacity: 1;
 }
 
-/* ---------- CONTACT PAGE ---------- */
-.contact-container {
-    display: flex;
-    gap: 50px;
-}
-
-.left-contact {
-    width: 40%;
-}
-
-.right-contact {
-    width: 60%;
-}
-
-.contact-item {
-    margin-bottom: 18px;
-}
-
-.contact-icons a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #1e90ff;
-    margin-right: 15px;
-}
-
-/* ---------- FORM ---------- */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #d0d7e2;
+.hover-items .icon {
+    background-color: #1e90ff;
+    padding: 0.8rem 1rem;
     border-radius: 8px;
-    margin: 10px 0;
-    background: white;
+    color: white;
+    font-size: 1.3rem;
 }
 
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #1e90ff;
+/* ===============================
+   CONTACT
+================================== */
+.contact-container {
+    padding: 2rem 0;
 }
 
-/* ---------- NAV BUTTONS (FIXED) ---------- */
+/* ===============================
+   BOTTOM NAVIGATION ✔
+================================== */
 .controls {
     position: fixed;
-    bottom: 25px;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    background: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     display: flex;
-    gap: 25px;
-    z-index: 2000;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.04);
+    padding: 0.7rem 1rem;
+    border-radius: 40px;
+    backdrop-filter: blur(6px);
+    z-index: 1000;
 }
 
 .control {
-    font-size: 1.3rem;
+    width: 45px;
+    height: 45px;
+    background: #1f2d48;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    color: #555;
-    transition: color 0.2s, transform 0.2s;
+    transition: 0.25s;
+    color: #9cb4d8;
 }
 
 .control:hover {
-    color: #1e90ff;
-    transform: translateY(-3px);
+    background: #1e90ff;
+    color: #fff;
 }
 
 .active-btn {
-    color: #1e90ff !important;
+    background: #1e90ff !important;
+    color: white !important;
 }
 
-/* ---------- THEME SWITCH ---------- */
+/* ===============================
+   THEME TOGGLE
+================================== */
 .theme-btn {
     position: fixed;
-    top: 25px;
-    right: 25px;
-    padding: 12px;
-    background: white;
-    color: #1e90ff;
+    top: 1.3rem;
+    right: 1.3rem;
+    width: 50px;
+    height: 50px;
+    background: #1f2d48;
+    color: white;
     border-radius: 50%;
-    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
-    z-index: 3000;
+    z-index: 1000;
+    transition: 0.3s;
 }
 
 .theme-btn:hover {
-    transform: scale(1.12);
+    background: #1e90ff;
 }
 
-/* ---------- DARK MODE FIXES ---------- */
-body.light-mode .controls {
-    background: #1f2937;
-    box-shadow: 0 6px 15px rgba(255,255,255,0.1);
-}
-
-body.light-mode .control {
-    color: #d1d5db;
-}
-
-body.light-mode .active-btn {
-    color: #60a5fa !important;
-}
-
-body.light-mode .theme-btn {
-    background: #1f2937;
-    color: #60a5fa;
-}
-
-.portfolio-item {
-    background: var(--item-bg, white);
+/* ===============================
+   LIGHT MODE
+================================== */
+body.light-mode {
+    background: #f6f6f9;
+    color: #0b1628;
 }
 
 body.light-mode .portfolio-item {
-    background: #1f2937;
-    border-color: #374151;
+    background: #ffffff;
 }
 
-body.light-mode input,
-body.light-mode textarea {
-    background: #111827;
-    color: #fff;
-    border-color: #374151;
+body.light-mode .control {
+    background: #fff;
 }
-
