@@ -11,13 +11,9 @@
             const targetId = this.dataset.id;
             const targetSection = document.getElementById(targetId);
 
-            // Remove previous active button
             if (currentActiveBtn) currentActiveBtn.classList.remove("active-btn");
-
-            // Activate clicked button
             this.classList.add("active-btn");
 
-            // Switch sections
             if (currentActiveSection) currentActiveSection.classList.remove("active");
             if (targetSection) targetSection.classList.add("active");
         });
@@ -84,7 +80,8 @@
     }
 
     portfolioItems.forEach(item => {
-        item.addEventListener("click", e => {
+        item.addEventListener("click", (e) => {
+            // Avoid triggering when clicking direct links (GitHub/YouTube/View Project)
             const isIconClick = e.target.closest("a");
             if (isIconClick) return;
 
@@ -99,9 +96,13 @@
         });
     });
 
-    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModal);
-    if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
-    document.addEventListener("keydown", e => {
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener("click", closeModal);
+    }
+    if (modalOverlay) {
+        modalOverlay.addEventListener("click", closeModal);
+    }
+    document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
     });
 
@@ -110,7 +111,8 @@
     const formStatus = document.getElementById("form-status");
 
     if (typeof emailjs !== "undefined") {
-        emailjs.init("YOUR_PUBLIC_KEY_HERE"); // replace if needed
+        // Replace with your EmailJS Public Key if you want it working
+        emailjs.init("YOUR_PUBLIC_KEY_HERE");
     }
 
     if (contactForm) {
@@ -130,6 +132,7 @@
                 formStatus.style.color = "var(--color-grey-1)";
             }
 
+            // Replace SERVICE_ID and TEMPLATE_ID with your EmailJS IDs
             emailjs
                 .sendForm("YOUR_SERVICE_ID_HERE", "YOUR_TEMPLATE_ID_HERE", "#contact-form")
                 .then(
@@ -140,7 +143,7 @@
                             formStatus.style.color = "lightgreen";
                         }
                     },
-                    error => {
+                    (error) => {
                         console.error("EmailJS error:", error);
                         if (formStatus) {
                             formStatus.textContent = "Something went wrong. Please try again.";
@@ -151,6 +154,13 @@
         });
     }
 })();
+
+
+
+
+
+
+
 
 
 
