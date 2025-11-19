@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,523 +23,439 @@
 
 <body class="main-content">
 
-    <!-- ========================= HOME ========================= -->
-    <header class="container header active reveal" id="home">
-        <div id="particles-js" class="particle-bg"></div>
+<header class="container header active reveal" id="home">
+    <div id="particles-js" class="particle-bg"></div>
 
-        <div class="header-content">
-            <div class="left-header">
-                <div class="profile-photo-wrapper">
-                    <img src="src/img/profile.jpg" alt="Rodrigo Gomes" class="profile-photo">
+    <div class="header-content">
+        <div class="left-header">
+            <div class="profile-photo-wrapper">
+                <img src="src/img/profile.jpg" alt="Rodrigo Gomes" class="profile-photo">
+            </div>
+        </div>
+
+        <div class="right-header">
+            <h1 class="name">Hi there, I'm <span>Rodrigo Gomes.</span></h1>
+            <h1 class="name">A Cloud Engineer.</h1>
+
+            <p>
+                I'm an aspiring Cloud Engineer passionate about building scalable, secure,
+                and efficient cloud solutions. From architecting infrastructures to automating
+                deployments, I thrive on optimizing cloud environments through innovation.
+            </p>
+
+            <div class="btn-con">
+                <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
+                    <span class="btn-text">Download CV</span>
+                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+    particles: { number: { value: 80 }, size: { value: 3 }, move: { speed: 2 } }
+});
+</script>
+
+<main>
+
+<section class="container about" id="about">
+    <div class="main-title">
+        <h2>About <span>Me</span><span class="bg-text">RG</span></h2>
+    </div>
+
+    <div class="about-container reveal">
+        <div class="left-about">
+            <h4>About Me</h4>
+            <p>
+                I’m a cloud-focused cyber security and data enthusiast, currently developing my skills
+                through hands-on projects in AWS, networking, IoT and business intelligence. I enjoy
+                designing secure architectures, automating infrastructure, and turning data into insight
+                that supports real business decisions.
+            </p>
+
+            <div class="btn-con">
+                <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
+                    <span class="btn-text">Download CV</span>
+                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="right-about">
+            <div class="about-item">
+                <div class="abt-text">
+                    <p class="large-text">30+</p>
+                    <p class="small-text">Projects Completed</p>
                 </div>
             </div>
 
-            <div class="right-header">
-                <h1 class="name">Hi there, I'm <span>Rodrigo Gomes.</span></h1>
-                <h1 class="name">A Cloud Engineer.</h1>
-
-                <p>
-                    I'm an aspiring Cloud Engineer passionate about building scalable, secure, 
-                    and efficient cloud solutions. From architecting infrastructures to automating 
-                    deployments, I thrive on optimizing cloud environments through innovation.
-                </p>
-
-                <div class="btn-con">
-                    <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
+            <div class="about-item">
+                <div class="abt-text">
+                    <p class="large-text">5+</p>
+                    <p class="small-text">Freelance Cloud Clients</p>
                 </div>
             </div>
         </div>
-    </header>
-
-    <!-- Particle Background -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            particles: { number: { value: 80 }, size: { value: 3 }, move: { speed: 2 } }
-        });
-    </script>
-
-    <!-- ========================= MAIN ========================= -->
-    <main>
-
-        <!-- ========================= ABOUT ========================= -->
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>Me</span><span class="bg-text">RG</span></h2>
-            </div>
-
-            <div class="about-container reveal">
-                <div class="left-about">
-                    <h4>About Me</h4>
-                    <p>
-                        I’m a cloud-focused cyber security and data enthusiast, currently developing my skills
-                        through hands-on projects in AWS, networking, IoT and business intelligence. I enjoy
-                        designing secure architectures, automating infrastructure, and turning data into insight
-                        that supports real business decisions.
-                    </p>
-
-                    <div class="btn-con">
-                        <a href="./src/img/cv_rodrigo_updated_dec.pdf" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">30+</p>
-                            <p class="small-text">Projects Completed</p>
-                        </div>
-                    </div>
-
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">5+</p>
-                            <p class="small-text">Freelance Cloud Clients</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SKILLS -->
-            <div class="about-stats reveal">
-                <h4 class="stat-title">My Skills</h4>
-
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">Software Development</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress"><span class="python"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">APIs & Microservices</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress"><span class="html"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">DevOps & CI/CD</p>
-                        <div class="progress-con">
-                            <p class="prog-text">85%</p>
-                            <div class="progress"><span class="css"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Cloud Architecture</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress"><span class="js"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Cloud Security</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress"><span class="react"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar">
-                        <p class="prog-title">Infrastructure as Code</p>
-                        <div class="progress-con">
-                            <p class="prog-text">78%</p>
-                            <div class="progress"><span class="node"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TIMELINE -->
-            <h4 class="stat-title">My Timeline</h4>
-
-            <div class="timeline reveal">
-                <!-- CyberGuard Solutions -->
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2025 - Present</p>
-                    <h5>Graduate Trainee Cyber Security Analyst <span>- CyberGuard Solutions</span></h5>
-                    <p>
-                        Working on real-world cybersecurity projects, including analysing cybercrime and threat
-                        actors, supporting incident response, and designing and testing secure client–server
-                        network environments in virtualised labs.
-                    </p>
-                </div>
-
-                <!-- HND at GBS -->
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <p class="tl-duration">2024 - Present</p>
-                    <h5>HND in Digital Technology (Cyber Security) <span>- GBS London Greenford</span></h5>
-                    <p>
-                        Studying networking, cloud computing, IoT, security and business intelligence.
-                        Completing practical projects like AWS VPC designs, IoT smart devices, BI dashboards,
-                        and security implementations mapped to standards and GDPR.
-                    </p>
-                </div>
-
-                <!-- Wisdom Ltd -->
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <p class="tl-duration">2024 - 2025</p>
-                    <h5>Junior Information Security Analyst <span>- Wisdom Ltd</span></h5>
-                    <p>
-                        Assessed security weaknesses in subnet designs for the finance department and head
-                        office, contributed to risk assessments, and helped create a Security Awareness
-                        Handbook covering GDPR, policies, and disaster recovery planning.
-                    </p>
-                </div>
-
-                <!-- Big Insights -->
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <p class="tl-duration">2024</p>
-                    <h5>Junior Data Scientist <span>- Big Insights Consulting</span></h5>
-                    <p>
-                        Supported data analysis projects focused on predictive analytics for operational
-                        improvement, working with dashboards and data-driven recommendations for clients.
-                    </p>
-                </div>
-
-                <!-- Brighter SW Ltd -->
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <p class="tl-duration">2023 - 2024</p>
-                    <h5>Software Developer <span>- Brighter SW Ltd</span></h5>
-                    <p>
-                        Developed and maintained software solutions to automate business processes, including
-                        coordinating a project to automate AllTrade’s manual tax payment method from design
-                        through to implementation.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- ========================= PORTFOLIO ========================= -->
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">RG</span></h2>
-            </div>
-
-            <h2 class="port-text">
-                <i>Here are some of my real cloud, DevOps, BI and IoT projects.</i>
-            </h2>
-
-            <div class="portfolios reveal">
-
-                <div class="portfolio-item"
-     data-modal-title="SkyStream AWS Cloud Migration"
-     data-modal-description="Designed a secure AWS VPC architecture with public and private subnets, EC2 web servers, NAT gateway, internet gateway, and load balancing to support a highly available web application with monitoring and logging.">
-             
-    <div class="image">
-        <img src="src/img/port1.png" alt="SkyStream AWS Cloud Migration">
     </div>
 
-    <div class="portfolio-item"
-     data-modal-title="SkyStream AWS Cloud Migration"
-     data-modal-description="Designed a secure AWS VPC architecture with public and private subnets, EC2 web servers, NAT gateway, internet gateway, and load balancing to support a highly available web application with monitoring and logging.">
-    <div class="image">
-        <img src="src/img/port1.png" alt="SkyStream AWS Cloud Migration">
-    </div>
+    <div class="about-stats reveal">
+        <h4 class="stat-title">My Skills</h4>
 
-    <div class="portfolio-text">
-        <h4>SkyStream AWS Cloud Migration</h4>
-        <p>Designed a secure AWS VPC with subnets, EC2, NAT, IGW and load balancing.</p>
+        <div class="progress-bars">
+            <div class="progress-bar">
+                <p class="prog-title">Software Development</p>
+                <div class="progress-con">
+                    <p class="prog-text">80%</p>
+                    <div class="progress"><span class="python"></span></div>
+                </div>
+            </div>
 
-        <!-- ⭐ NEW VIEW PROJECT BUTTON -->
-        <a href="src/img/unit6_presentation_completed.pptx" 
-           class="view-project-btn" 
-           download>
-            <i class="fas fa-file-powerpoint"></i> View Project
-        </a>
+            <div class="progress-bar">
+                <p class="prog-title">APIs & Microservices</p>
+                <div class="progress-con">
+                    <p class="prog-text">70%</p>
+                    <div class="progress"><span class="html"></span></div>
+                </div>
+            </div>
 
-    </div>
+            <div class="progress-bar">
+                <p class="prog-title">DevOps & CI/CD</p>
+                <div class="progress-con">
+                    <p class="prog-text">85%</p>
+                    <div class="progress"><span class="css"></span></div>
+                </div>
+            </div>
 
-    <div class="hover-items">
-        <h3>Project Links</h3>
-        <div class="icons">
-            <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+            <div class="progress-bar">
+                <p class="prog-title">Cloud Architecture</p>
+                <div class="progress-con">
+                    <p class="prog-text">87%</p>
+                    <div class="progress"><span class="js"></span></div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <p class="prog-title">Cloud Security</p>
+                <div class="progress-con">
+                    <p class="prog-text">75%</p>
+                    <div class="progress"><span class="react"></span></div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <p class="prog-title">Infrastructure as Code</p>
+                <div class="progress-con">
+                    <p class="prog-text">78%</p>
+                    <div class="progress"><span class="node"></span></div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <h4 class="stat-title">My Timeline</h4>
+
+    <div class="timeline reveal">
+        <div class="timeline-item">
+            <div class="tl-icon"><i class="fas fa-briefcase"></i></div>
+            <p class="tl-duration">2025 - Present</p>
+            <h5>Graduate Trainee Cyber Security Analyst <span>- CyberGuard Solutions</span></h5>
+            <p>Working on cybersecurity projects including cybercrime analysis and secure virtualized networks.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="tl-icon"><i class="fas fa-user-graduate"></i></div>
+            <p class="tl-duration">2024 - Present</p>
+            <h5>HND Digital Technology (Cyber Security) <span>- GBS London</span></h5>
+            <p>Projects include AWS VPC design, IoT smart systems, BI dashboards, and GDPR security compliance.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="tl-icon"><i class="fas fa-shield-alt"></i></div>
+            <p class="tl-duration">2024 - 2025</p>
+            <h5>Junior Information Security Analyst <span>- Wisdom Ltd</span></h5>
+            <p>Performed subnet risk assessments, policy reviews, and contributed to the Security Awareness Handbook.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="tl-icon"><i class="fas fa-chart-line"></i></div>
+            <p class="tl-duration">2024</p>
+            <h5>Junior Data Scientist <span>- Big Insights Consulting</span></h5>
+            <p>Supported predictive analytics, dashboard design, and business insights reporting.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="tl-icon"><i class="fas fa-code"></i></div>
+            <p class="tl-duration">2023 - 2024</p>
+            <h5>Software Developer <span>- Brighter SW Ltd</span></h5>
+            <p>Automated business workflows including a full tax-payment automation system.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="portfolio">
+    <div class="main-title">
+        <h2>My <span>Portfolio</span><span class="bg-text">RG</span></h2>
+    </div>
+
+    <h2 class="port-text"><i>Here are some of my real cloud, DevOps, BI and IoT projects.</i></h2>
+
+    <div class="portfolios reveal">
+
+        <!-- ========== FIXED SKYSTREAM PROJECT ========== -->
+        <div class="portfolio-item"
+             data-modal-title="SkyStream AWS Cloud Migration"
+             data-modal-description="Designed a secure AWS VPC architecture with public and private subnets, EC2 web servers, NAT gateway, internet gateway, and load balancing to support a highly available web application with monitoring and logging.">
+
+            <div class="image">
+                <img src="src/img/port1.png" alt="SkyStream AWS Cloud Migration">
+            </div>
+
+            <div class="portfolio-text">
+                <h4>SkyStream AWS Cloud Migration</h4>
+                <p>Designed a secure AWS VPC with subnets, EC2, NAT, IGW and load balancing.</p>
+
+                <a href="src/img/unit6_presentation_completed.pptx"
+                   class="view-project-btn"
+                   download>
+                    <i class="fas fa-file-powerpoint"></i> View Project
+                </a>
+            </div>
+
+            <div class="hover-items">
+                <h3>Project Links</h3>
+                <div class="icons">
+                    <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- ========== END FIXED PROJECT ========== -->
+
+
+        <!-- EVERYTHING BELOW IS UNCHANGED -->
+        <div class="portfolio-item"
+             data-modal-title="IoT Smart Bin Prototype"
+             data-modal-description="Built an Arduino-based IoT smart bin using an HC-SR04 ultrasonic sensor, servo motor, LED and buzzer.">
+            <div class="image">
+                <img src="src/img/port2.png" alt="IoT Smart Bin">
+            </div>
+            <div class="portfolio-text">
+                <h4>IoT Smart Bin Prototype</h4>
+                <p>Arduino smart bin with ultrasonic sensor, servo, buzzer and LED.</p>
+            </div>
+            <div class="hover-items">
+                <h3>Project Links</h3>
+                <div class="icons">
+                    <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-modal-title="SmartChoice Retail BI Dashboard"
+             data-modal-description="Developed an interactive Power BI dashboard using Sales, Products and Stores data.">
+            <div class="image">
+                <img src="src/img/port3.png" alt="BI Dashboard">
+            </div>
+            <div class="portfolio-text">
+                <h4>SmartChoice Retail BI Dashboard</h4>
+                <p>Interactive Power BI dashboard analysing store and product performance.</p>
+            </div>
+            <div class="hover-items">
+                <h3>Project Links</h3>
+                <div class="icons">
+                    <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-modal-title="Innovate Ltd Cloud Security Assessment"
+             data-modal-description="Performed AWS cloud threat analysis, IAM auditing, encryption review and GDPR compliance mapping.">
+            <div class="image">
+                <img src="src/img/port4.png" alt="Cloud Security Assessment">
+            </div>
+            <div class="portfolio-text">
+                <h4>Innovate Ltd Cloud Security Assessment</h4>
+                <p>Complete AWS threat analysis including IAM and GDPR compliance.</p>
+            </div>
+            <div class="hover-items">
+                <h3>Project Links</h3>
+                <div class="icons">
+                    <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-modal-title="CareConnect Telemedicine System"
+             data-modal-description="Designed a cloud-based telemedicine and remote patient monitoring architecture.">
+            <div class="image">
+                <img src="src/img/port5.png" alt="CareConnect Telemedicine">
+            </div>
+            <div class="portfolio-text">
+                <h4>CareConnect Telemedicine System</h4>
+                <p>Cloud architecture for telemedicine and remote patient monitoring.</p>
+            </div>
+            <div class="hover-items">
+                <h3>Project Links</h3>
+                <div class="icons">
+                    <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-modal-title="Cloud Engineer Portfolio Website"
+             data-modal-description="Built this modern portfolio using HTML, CSS, JS and glassmorphism.">
+            <div class="image">
+                <img src="src/img/port7.png" alt="Portfolio Website">
+            </div>
+            <div class="portfolio-text">
+                <h4>Cloud Engineer Portfolio Website</h4>
+                <p>Responsive portfolio with glass UI and dark/light mode.</p>
+            </div>
+            <div class="hover-items">
+                <h3>Project Links</h3>
+                <div class="icons">
+                    <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="container contact" id="contact">
+    <div class="contact-container">
+        <div class="main-title">
+            <h2>Hire <span>Me</span><span class="bg-text">RG</span></h2>
+        </div>
+
+        <div class="contact-content-con reveal">
+
+            <div class="left-contact">
+                <h4>Let's Connect</h4>
+                <p>Have a project idea or want to chat about cloud technologies? Feel free to reach out!</p>
+
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-card-body">
+                            <h5>Location</h5><p>Bordon, England</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-card-body">
+                            <h5>Email</h5><p>rodrigosgomes21@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-card-body">
+                            <h5>Phone</h5><p>+44 07480239118</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-globe"></i></div>
+                        <div class="contact-card-body">
+                            <h5>Languages</h5><p>English, Portuguese</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-availability">
+                    <span class="pill">Open to Cloud Roles</span>
+                    <span class="pill">Cyber Security</span>
+                    <span class="pill">Data & BI</span>
+                </div>
+
+                <div class="contact-icons">
+                    <div class="contact-icon">
+                        <a href="https://www.linkedin.com/in/rodrigo-gomes-9030b1340" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/rgomes2023" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-contact">
+                <form id="contact-form" class="contact-form">
+                    <div class="input-control">
+                        <label>Your Name</label>
+                        <input type="text" name="user_name" required>
+                    </div>
+
+                    <div class="input-control">
+                        <label>Your Email</label>
+                        <input type="email" name="user_email" required>
+                    </div>
+
+                    <div class="input-control">
+                        <label>Subject</label>
+                        <input type="text" name="subject" required>
+                    </div>
+
+                    <div class="input-control">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="submit-btn">
+                        <button type="submit" class="main-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </div>
+
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<div class="controls">
+    <div class="control active-btn" data-id="home"><i class="fas fa-home"></i></div>
+    <div class="control" data-id="about"><i class="fas fa-user"></i></div>
+    <div class="control" data-id="portfolio"><i class="fas fa-briefcase"></i></div>
+    <div class="control" data-id="contact"><i class="fas fa-envelope-open"></i></div>
+</div>
+
+<div class="theme-btn"><i class="fas fa-adjust"></i></div>
+
+<div class="portfolio-modal" id="portfolio-modal">
+    <div class="portfolio-modal-overlay"></div>
+    <div class="portfolio-modal-content">
+        <button class="portfolio-modal-close" id="portfolio-modal-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="src/app.js"></script>
 
-
-                <div class="portfolio-item"
-                     data-modal-title="IoT Smart Bin Prototype"
-                     data-modal-description="Built an Arduino-based IoT smart bin using an HC-SR04 ultrasonic sensor, servo motor, LED and buzzer. The lid opens automatically when a user is detected, with audio and visual feedback, helping improve waste management for smart city environments.">
-                    <div class="image">
-                        <img src="src/img/port2.png" alt="IoT Smart Bin">
-                    </div>
-                    <div class="portfolio-text">
-                        <h4>IoT Smart Bin Prototype</h4>
-                        <p>Arduino smart bin with ultrasonic sensor, servo, buzzer and LED.</p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Links</h3>
-                        <div class="icons">
-                            <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item"
-                     data-modal-title="SmartChoice Retail BI Dashboard"
-                     data-modal-description="Developed an interactive Power BI dashboard for SmartChoice Ltd using Sales, Products, and Stores data. Enabled managers to analyse revenue by store, product performance, and time trends to support better inventory and marketing decisions.">
-                    <div class="image">
-                        <img src="src/img/port3.png" alt="SmartChoice BI Dashboard">
-                    </div>
-                    <div class="portfolio-text">
-                        <h4>SmartChoice Retail BI Dashboard</h4>
-                        <p>Interactive Power BI dashboard analysing store and product performance.</p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Links</h3>
-                        <div class="icons">
-                            <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item"
-                     data-modal-title="Innovate Ltd Cloud Security Assessment"
-                     data-modal-description="Conducted a detailed cloud security assessment of an AWS tenancy for Innovate Ltd, mapping risks across application, network and user layers, and recommending IAM hardening, encryption, monitoring, and network segmentation aligned with GDPR.">
-                    <div class="image">
-                        <img src="src/img/port4.png" alt="Cloud Security Assessment">
-                    </div>
-                    <div class="portfolio-text">
-                        <h4>Innovate Ltd Cloud Security Assessment</h4>
-                        <p>Complete AWS threat analysis including IAM, encryption and GDPR compliance.</p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Links</h3>
-                        <div class="icons">
-                            <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item"
-                     data-modal-title="CareConnect Telemedicine System"
-                     data-modal-description="Designed a cloud-based telemedicine and remote patient monitoring architecture for Save a Life Hospital Network (SLHN), integrating secure data flows, analytics, and remote consultations to improve patient access and operational efficiency.">
-                    <div class="image">
-                        <img src="src/img/port5.png" alt="CareConnect Telemedicine">
-                    </div>
-                    <div class="portfolio-text">
-                        <h4>CareConnect Telemedicine System</h4>
-                        <p>Cloud architecture for telemedicine and remote patient monitoring for SLHN.</p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Links</h3>
-                        <div class="icons">
-                            <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item"
-                     data-modal-title="Cloud Engineer Portfolio Website"
-                     data-modal-description="Built this modern personal portfolio using HTML, CSS and JavaScript with glassmorphism, particle effects, reveal animations and a dark/light theme toggle, to showcase my cloud, DevOps, BI and IoT projects.">
-                    <div class="image">
-                        <img src="src/img/port7.png" alt="Portfolio Website">
-                    </div>
-                    <div class="portfolio-text">
-                        <h4>Cloud Engineer Portfolio Website</h4>
-                        <p>Responsive portfolio using HTML, CSS, JS, glassmorphism and dark/light mode.</p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Links</h3>
-                        <div class="icons">
-                            <a href="https://github.com/rgomes2023" class="icon" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.youtube.com" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- ========================= CONTACT ========================= -->
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Hire <span>Me</span><span class="bg-text">RG</span></h2>
-                </div>
-
-                <div class="contact-content-con reveal">
-                    <!-- LEFT SIDE -->
-                    <div class="left-contact">
-                        <h4>Let's Connect</h4>
-                        <p>
-                            Have a project idea or want to chat about cloud technologies?  
-                            Feel free to reach out — I'm always excited to collaborate!
-                        </p>
-
-                        <!-- Card-style info -->
-                        <div class="contact-info-grid">
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-card-body">
-                                    <h5>Location</h5>
-                                    <p>Bordon, England</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-card-body">
-                                    <h5>Email</h5>
-                                    <p>rodrigosgomes21@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-card-body">
-                                    <h5>Phone</h5>
-                                    <p>+44 07480239118</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <div class="contact-card-body">
-                                    <h5>Languages</h5>
-                                    <p>English, Portuguese</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Availability chips -->
-                        <div class="contact-availability">
-                            <span class="pill">Open to Cloud Roles</span>
-                            <span class="pill">Cyber Security</span>
-                            <span class="pill">Data &amp; BI</span>
-                        </div>
-
-                        <!-- Social Icons -->
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="https://www.linkedin.com/in/rodrigo-gomes-9030b1340" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/rgomes2023" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- RIGHT SIDE FORM -->
-                    <div class="right-contact">
-                        <form id="contact-form" class="contact-form">
-                            <div class="input-control">
-                                <label for="user_name">Your Name</label>
-                                <input id="user_name" type="text" name="user_name" required placeholder="Your Name">
-                            </div>
-
-                            <div class="input-control">
-                                <label for="user_email">Your Email</label>
-                                <input id="user_email" type="email" name="user_email" required placeholder="Your Email">
-                            </div>
-
-                            <div class="input-control">
-                                <label for="subject">Subject</label>
-                                <input id="subject" type="text" name="subject" required placeholder="Enter Subject">
-                            </div>
-
-                            <div class="input-control">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" cols="30" rows="5" required placeholder="Your Message..."></textarea>
-                            </div>
-
-                            <div class="submit-btn">
-                                <button type="submit" class="main-btn">
-                                    <span class="btn-text">Send Message</span>
-                                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                                </button>
-                            </div>
-
-                            <p id="form-status" class="form-status"></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-
-    <!-- ========================= NAVIGATION ========================= -->
-    <div class="controls">
-        <div class="control active-btn" data-id="home"><i class="fas fa-home"></i></div>
-        <div class="control" data-id="about"><i class="fas fa-user"></i></div>
-        <div class="control" data-id="portfolio"><i class="fas fa-briefcase"></i></div>
-        <div class="control" data-id="contact"><i class="fas fa-envelope-open"></i></div>
-    </div>
-
-    <!-- Theme Switch -->
-    <div class="theme-btn"><i class="fas fa-adjust"></i></div>
-
-    <!-- PORTFOLIO MODAL -->
-    <div class="portfolio-modal" id="portfolio-modal">
-        <div class="portfolio-modal-overlay"></div>
-        <div class="portfolio-modal-content">
-            <button class="portfolio-modal-close" id="portfolio-modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <h3 id="modal-title"></h3>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <!-- JS -->
-    <script src="src/app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
