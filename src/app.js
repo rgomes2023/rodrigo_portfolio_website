@@ -29,17 +29,14 @@
     // ========= REVEAL ON SCROLL =========
     const revealElements = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("reveal-visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.15 }
-        );
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("reveal-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
         revealElements.forEach(el => observer.observe(el));
     } else {
@@ -55,23 +52,17 @@
     const modalOverlay = modal ? modal.querySelector(".portfolio-modal-overlay") : null;
     const portfolioItems = document.querySelectorAll(".portfolio-item");
 
-    function openModal(title, description) {
+    function openModal(title, description, imageSrc) {
         if (!modal) return;
 
         modalTitle.textContent = title;
         modalDescription.textContent = description;
 
-        // Only show AWS image for SkyStream project
-        if (modalImage) {
-            if (title === "SkyStream AWS Cloud Migration") {
-                modalImage.src = "src/img/aws_cloud.webp";
-                modalImage.alt = "AWS Cloud architecture for SkyStream migration";
-                modalImage.style.display = "block";
-            } else {
-                modalImage.style.display = "none";
-                modalImage.src = "";
-                modalImage.alt = "";
-            }
+        if (imageSrc) {
+            modalImage.src = imageSrc;
+            modalImage.style.display = "block";
+        } else {
+            modalImage.style.display = "none";
         }
 
         modal.classList.add("open");
@@ -84,25 +75,30 @@
 
     portfolioItems.forEach(item => {
         item.addEventListener("click", (e) => {
-            // Avoid triggering when clicking direct links (GitHub/YouTube/View Project)
-            const isIconClick = e.target.closest("a");
-            if (isIconClick) return;
+            // avoid triggering modal when clicking any <a> buttons or icons
+            if (e.target.closest("a")) return;
 
             const title = item.dataset.modalTitle || item.querySelector("h4")?.textContent || "";
             const description =
                 item.dataset.modalDescription ||
                 item.querySelector(".portfolio-text p")?.textContent ||
                 "";
-            openModal(title, description);
+
+            // Only SkyStream has an image
+            let modalImg = null;
+            const imgTag = item.querySelector("img");
+
+            if (imgTag && imgTag.src.includes("aws_cloud.webp")) {
+                modalImg = imgTag.src;
+            }
+
+            openModal(title, description, modalImg);
         });
     });
 
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener("click", closeModal);
-    }
-    if (modalOverlay) {
-        modalOverlay.addEventListener("click", closeModal);
-    }
+    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModal);
+    if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
     });
@@ -112,7 +108,6 @@
     const formStatus = document.getElementById("form-status");
 
     if (typeof emailjs !== "undefined") {
-        // Replace with your EmailJS Public Key if you want it working
         emailjs.init("YOUR_PUBLIC_KEY_HERE");
     }
 
@@ -133,7 +128,6 @@
                 formStatus.style.color = "var(--color-grey-1)";
             }
 
-            // Replace SERVICE_ID and TEMPLATE_ID with your EmailJS IDs
             emailjs
                 .sendForm("YOUR_SERVICE_ID_HERE", "YOUR_TEMPLATE_ID_HERE", "#contact-form")
                 .then(
@@ -155,3 +149,4 @@
         });
     }
 })();
+
