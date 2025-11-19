@@ -1194,7 +1194,17 @@ section {
   box-shadow: none;
 }
 
+.project-list {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    color: var(--color-grey-2);
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+}
 
+.project-list li {
+    margin-bottom: 0.3rem;
+}
 
 
 
