@@ -1189,4 +1189,12 @@ section {
     transform: none !important;
 }
 
+/* ========================================================= */
+/* FIX HOME PAGE BORDER — KEEP GLASSMORPHISM BUT INVISIBLE   */
+/* ========================================================= */
+#home {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
 
